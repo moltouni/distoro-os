@@ -1,0 +1,57 @@
+			       distoro operating system
+			::::::::::::::::::::::::::::::::::::::
+		          distoro.os@gmail.com (Mario Novak)
+
+Project that includes it's own Two-Stage Bootloader and Kernel from wich you can learn, expand it or do both...
+This was my High School Graduation Project (2012.) and i wanted to make it open. Enoy!
+
+Some of the main things:
+	- own two stage bootloader
+	- x86
+	- Protected mode
+	- FAT 12 filesystem
+	- keyboard
+	- screen
+	- working PIT, PIC
+	- exceptions, interrupts
+
+======================================================
+		HOW DOES IT WORK
+======================================================
+
+Project consists of two stage bootloader and kernel.
+
+First stage of bootloader just reads disk wich is formatted as FAT12 using BIOS interrupts and loads stage2.bin.
+Second stage then sets up Protected mode (Keyboard method) and loads kernel.bin.
+Kernel cleans screen and outputs some welcome text, waits 5 seconds (PIT), cleans screen and gives you "input screen" (keyboard, PIC).
+Kernel also has exceptions set up with interrupts for PIT and keyboard...
+
+Script comp/create.sh creates file "disk" wich has FAT 12 filesystem on it, then it puts two stages of bootloader onto that "disk" file
+	and calls comp/compileAndLink.sh wich just compiles and links all together into kernel.bin and puts it in that file.
+	For testing purpuses you can run bochs emulator. Configure bochs with floppy type=1_44, 1_44="disk", status=inserted.
+
+I've also included binaries and complete disk image ("disk") of Distoro OS if you just wan't dd-it to USB and test this thing.
+
+Use this project as example of building simple operating system that WORKS or expand it so it can run on potatto!
+Have fun!
+
+======================================================
+		BUILDING PROJECT
+======================================================
+
+Tools:
+	- nasm 2.08.01
+	- binutils-2.19.1
+	- gcc-core-4.3.3
+	- libmpc-dev
+	- gmp-5.0.4
+	- mpfr-3.1.0
+	- bochs 2.4.5
+
+Steps:
+	1. Get tools with recommended versions (check /comp/compileAndLink.sh for paths)
+	2. cd to comp/
+	3. ./create.sh (Makefile?)
+
+If you have any problems, questions, suggestions (...) contact me at distoro.os@gmail.com (Mario Novak).
+Peace.
