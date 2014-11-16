@@ -1,6 +1,6 @@
 			       distoro operating system
 			::::::::::::::::::::::::::::::::::::::
-		          distoro.os@gmail.com (Mario Novak)
+		           
 
 Project that includes it's own Two-Stage Bootloader and Kernel from wich you can learn, expand it or do both...
 This was my High School Graduation Project (2012.) and i wanted to make it open. Enoy!
@@ -53,5 +53,4 @@ Steps:
 	2. cd to comp/
 	3. ./create.sh (Makefile?)
 
-If you have any problems, questions, suggestions (...) contact me at distoro.os@gmail.com (Mario Novak).
 Peace.
