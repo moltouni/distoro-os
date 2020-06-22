@@ -1,6 +1,6 @@
 			       distoro operating system
 			::::::::::::::::::::::::::::::::::::::
-		           
+
 
 Project that includes it's own Two-Stage Bootloader and Kernel from wich you can learn, expand it or do both...
 This was my High School Graduation Project (2012.) and I wanted to make it open. Enjoy!
@@ -54,3 +54,9 @@ Steps:
 	3. ./create.sh (Makefile?)
 
 Peace.
+
+======================================================
+		RESOURCES USED
+======================================================
+
+- https://wiki.osdev.org/
